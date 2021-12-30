@@ -88,6 +88,7 @@ namespace BeatSender
                     }
 
                     smtp.Send(m);
+                    System.Threading.Thread.Sleep(6000);
 
                 }
             }
@@ -123,10 +124,17 @@ namespace BeatSender
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            FileUpload upload = (FileUpload)filesGrid.SelectedItem;
-            list.Remove(upload);
-            filesGrid.ItemsSource = null;
-            filesGrid.ItemsSource = list;
+            try
+            {
+                FileUpload upload = (FileUpload)filesGrid.SelectedItem;
+                list.Remove(upload);
+                filesGrid.ItemsSource = null;
+                filesGrid.ItemsSource = list;
+            }
+            catch
+            {
+
+            }
         }
     }
 }

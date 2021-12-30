@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:BeatSender"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
@@ -11,15 +12,15 @@
       Width="1920">
 
     <Grid Background="White">
-        <TextBox x:Name="mailTheme" HorizontalAlignment="Left" Height="32" Margin="587,243,0,0" TextWrapping="Wrap" Text="Тема письма" VerticalAlignment="Top" Width="728"/>
-        <TextBox x:Name="mailText" HorizontalAlignment="Left" Height="328" Margin="587,320,0,0" TextWrapping="Wrap" Text="Текст письма" VerticalAlignment="Top" Width="728" AcceptsReturn="True" AcceptsTab="True"/>
-        <Button Content="Вставить почты" HorizontalAlignment="Left" Margin="1342,130,0,0" VerticalAlignment="Top" Width="106" Click="Button_Click" Height="38"/>
-        <TextBox x:Name="mailBox" HorizontalAlignment="Left" Height="23" Margin="30,78,0,0" TextWrapping="Wrap" Text="Почта" VerticalAlignment="Top" Width="95"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Height="23" Margin="30,163,0,0"  VerticalAlignment="Top" Width="95"/>
-        <Button x:Name="btnSend" Content="Отправить" HorizontalAlignment="Left" Margin="874,758,0,0" VerticalAlignment="Top" Width="165" Click="btnSend_Click" Height="60"/>
-        <Button x:Name="btnFile" Content="Прикрепить файл" HorizontalAlignment="Left" Margin="587,763,0,0" VerticalAlignment="Top" Width="131" Click="btnFile_Click" Height="50"/>
-        <TextBox x:Name="allMails" HorizontalAlignment="Left" Height="72" Margin="587,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="728" VerticalScrollBarVisibility="Auto"/>
-        <DataGrid x:Name="filesGrid" HorizontalAlignment="Left" Height="198" Margin="235,615,0,0" VerticalAlignment="Top" Width="273" AutoGenerateColumns="False">
+        <TextBox x:Name="mailTheme" HorizontalAlignment="Left" Height="49" Margin="587,228,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="728" BorderThickness="0" Background="#90CAF9" Style="{DynamicResource MaterialDesignOutlinedTextBox}" materialDesign:HintAssist.Hint="Тема письма" materialDesign:HintAssist.Background="#90CAF9"/>
+        <TextBox x:Name="mailText" HorizontalAlignment="Left" Height="328" Margin="530,320,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="845" AcceptsReturn="True" AcceptsTab="True" BorderThickness="0" Background="#90CAF9" Style="{DynamicResource MaterialDesignOutlinedTextBox}" materialDesign:HintAssist.Hint="Текст письма" materialDesign:HintAssist.Background="#90CAF9"/>
+        <Button Content="Импорт" HorizontalAlignment="Left" Margin="1342,130,0,0" VerticalAlignment="Top" Width="106" Click="Button_Click" Height="38" Style="{DynamicResource MaterialDesignRaisedButton}" Background="#1E88E5" BorderThickness="0"/>
+        <TextBox x:Name="mailBox" HorizontalAlignment="Left" Height="50" Margin="30,74,0,0" TextWrapping="Wrap" MaxWidth="400" AcceptsReturn="True" FontSize="15" Text="" VerticalAlignment="Top" Width="200" BorderThickness="0" Background="#90CAF9" Style="{DynamicResource MaterialDesignOutlinedTextBox}" materialDesign:HintAssist.HelperText="Почта"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" MaxWidth="400" FontSize="15" Height="52" Margin="30,157,0,0"  VerticalAlignment="Top" Width="200" Style="{DynamicResource MaterialDesignOutlinedPasswordBox}" BorderThickness="0" Background="#90CAF9" materialDesign:HintAssist.HelperText="Пароль"/>
+        <Button x:Name="btnSend" Content="Отправить" HorizontalAlignment="Left" Margin="1184,752,0,0" VerticalAlignment="Top" Width="166" Click="btnSend_Click" Height="60" Style="{DynamicResource MaterialDesignRaisedButton}" Background="#1E88E5" BorderThickness="0"/>
+        <Button x:Name="btnFile" Content="Прикрепить файл" HorizontalAlignment="Left" Margin="568,752,0,0" VerticalAlignment="Top" Width="166" Click="btnFile_Click" Height="60" Style="{DynamicResource MaterialDesignRaisedButton}" Background="#1E88E5" BorderThickness="0"/>
+        <TextBox x:Name="allMails" HorizontalAlignment="Left" Height="72" Margin="587,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="728" VerticalScrollBarVisibility="Auto" BorderThickness="0" Background="#90CAF9" Style="{DynamicResource MaterialDesignOutlinedTextBox}" materialDesign:HintAssist.Hint="Почты"/>
+        <DataGrid x:Name="filesGrid" HorizontalAlignment="Left" Height="198" Margin="100,320,0,0" VerticalAlignment="Top" Width="273" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название файла" Binding="{Binding Name}"/>
 

@@ -17,3 +17,10 @@ C:\Users\step4\source\repos\BeatSender\BeatSender\obj\Debug\LoginPage.g.cs
 C:\Users\step4\source\repos\BeatSender\BeatSender\obj\Debug\Sender.g.cs
 C:\Users\step4\source\repos\BeatSender\BeatSender\obj\Debug\LoginPage.baml
 C:\Users\step4\source\repos\BeatSender\BeatSender\obj\Debug\Sender.baml
+C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\MaterialDesignColors.dll
+C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\MaterialDesignColors.pdb
+C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\step4\source\repos\BeatSender\BeatSender\obj\Debug\App.baml
+C:\Users\step4\source\repos\BeatSender\BeatSender\obj\Debug\BeatSender.csproj.CopyComplete
