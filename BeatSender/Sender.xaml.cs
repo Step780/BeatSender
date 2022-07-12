@@ -1,6 +1,10 @@
-﻿using Microsoft.Win32;
+﻿using ExcelDataReader;
+using IronXL;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.OleDb;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -29,6 +33,7 @@ namespace BeatSender
         public string selecteddFileName = "";
         public string[] files;
         public string[] result;
+        public string hh = "";
         List<FileUpload> list = new List<FileUpload>();
 
         public class FileUpload
@@ -44,19 +49,41 @@ namespace BeatSender
 
             mailBox.Text = mail;
             passwordBox.Password = password;
+
+            MailMessage msg = new MailMessage();
+            msg.DeliveryNotificationOptions =
+                DeliveryNotificationOptions.OnFailure |
+                DeliveryNotificationOptions.OnSuccess |
+                DeliveryNotificationOptions.Delay;
+            msg.Headers.Add("Disposition-Notification-To", "rxsemarybeats@gmail.com");
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Текстовые документы(*.txt;)|*.txt;";
+
             if (openFileDialog.ShowDialog() == true)
             {
+                //using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+                //{
+                //    using(IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
+                //    {
+                //        DataSet result = reader.AsDataSet(new ExcelDataSetConfiguration()
+                //        {
+                //            ConfigureDataTable = (_) => new ExcelDataTableConfiguration() { UseHeaderRow = true }
+                //        });
+
+                //    }
+                //}
+
                 string phrase = File.ReadAllText(openFileDialog.FileName);
                 allMails.Text = phrase;
-                
 
 
-            }
+
+            };
         }
 
 
@@ -68,6 +95,7 @@ namespace BeatSender
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
                 smtp.Credentials = new NetworkCredential(mailBox.Text, passwordBox.Password);
                 smtp.EnableSsl = true;
+                
 
                 string[] words = mails.Split(';');
 
@@ -87,8 +115,16 @@ namespace BeatSender
 
                     }
 
+                    
+
                     smtp.Send(m);
-                    System.Threading.Thread.Sleep(6000);
+
+                    //m.DeliveryNotificationOptions =
+                    //DeliveryNotificationOptions.OnFailure |
+                    //DeliveryNotificationOptions.OnSuccess |
+                    //DeliveryNotificationOptions.Delay;
+                    //m.Headers.Add(word, "rxsemarybeats@gmail.com");
+                    System.Threading.Thread.Sleep(3000);
 
                 }
             }

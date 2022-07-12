@@ -97,6 +97,7 @@ namespace BeatSender
                 smtp.Credentials = new NetworkCredential(mailBox.Text, passwordBox.Password);
                 smtp.EnableSsl = true;
                 
+                
                 MainWindow.MainFrameInstance.Navigate(new Sender(mailBox.Text, passwordBox.Password));
 
             }

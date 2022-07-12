@@ -24,3 +24,11 @@ C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\MaterialDesignThemes
 C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\step4\source\repos\BeatSender\BeatSender\obj\Debug\App.baml
 C:\Users\step4\source\repos\BeatSender\BeatSender\obj\Debug\BeatSender.csproj.CopyComplete
+C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\IronXL.dll
+C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\IronXL.xml
+C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\ExcelDataReader.dll
+C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\ExcelDataReader.pdb
+C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\ExcelDataReader.xml
+C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\step4\source\repos\BeatSender\BeatSender\bin\Debug\ExcelDataReader.DataSet.xml
